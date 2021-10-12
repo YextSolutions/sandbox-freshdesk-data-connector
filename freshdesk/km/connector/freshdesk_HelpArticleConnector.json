@@ -1,0 +1,178 @@
+{
+  "$id": "freshdeskHelpArticleConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "displayName": "Freshdesk Help Article Connector",
+  "entityType": "helpArticle",
+  "source": {
+    "sourceConfig": {
+      "apiPullConfig": {
+        "requestType": "GET",
+        "url": "https://mattmalonetest.freshdesk.com/api/v2/solutions/folders/69000541651/articles?per_page\u003d100",
+        "authentication": {
+          "basicAuthentication": {
+            "username": "${{km/connector.freshdeskHelpArticleConnector.api_username}}",
+            "password": "${{km/connector.freshdeskHelpArticleConnector.api_password}}"
+          }
+        },
+        "headers": {},
+        "queryParams": {
+          "": ""
+        },
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "[]"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Entity ID",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "Name",
+        "path": "title"
+      },
+      {
+        "type": "JSON",
+        "header": "Category ID",
+        "path": "category_id"
+      },
+      {
+        "type": "JSON",
+        "header": "Body",
+        "path": "description_text"
+      },
+      {
+        "type": "JSON",
+        "header": "Folder ID",
+        "path": "folder_id"
+      },
+      {
+        "type": "JSON",
+        "header": "Views",
+        "path": "hits"
+      },
+      {
+        "type": "JSON",
+        "header": "Tags",
+        "path": "tags"
+      },
+      {
+        "type": "JSON",
+        "header": "Thumbs Down",
+        "path": "thumbs_down"
+      },
+      {
+        "type": "JSON",
+        "header": "Thumbs Up",
+        "path": "thumbs_up"
+      },
+      {
+        "type": "JSON",
+        "header": "Date Created",
+        "path": "created_at"
+      },
+      {
+        "type": "JSON",
+        "header": "Date Updated",
+        "path": "updated_at"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "extractText": {
+        "inputHeader": "Date Created",
+        "newColumnHeader": "Date Created (final)",
+        "extractOperation": "ALL_TEXT_BEFORE",
+        "extractFrom": "FIRST_INSTANCE_MATCHING_TEXT",
+        "valueToFind": {
+          "plainText": {
+            "value": "T",
+            "ignoreCase": false
+          }
+        }
+      }
+    },
+    {
+      "extractText": {
+        "inputHeader": "Date Updated",
+        "newColumnHeader": "Date Updated (final)",
+        "extractOperation": "ALL_TEXT_BEFORE",
+        "extractFrom": "FIRST_INSTANCE_MATCHING_TEXT",
+        "valueToFind": {
+          "plainText": {
+            "value": "T",
+            "ignoreCase": false
+          }
+        }
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Entity ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_categoryID",
+      "header": "Category ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_folderID",
+      "header": "Folder ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "body",
+      "header": "Body",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_views",
+      "header": "Views",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_tags",
+      "header": "Tags",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_thumbsDown",
+      "header": "Thumbs Down",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_thumbsUp",
+      "header": "Thumbs Up",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_dateCreated",
+      "header": "Date Created (final)",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_dateUpdated",
+      "header": "Date Updated (final)",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": false,
+    "runMode": "DEFAULT"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$id": "ce_helpArticle",
+  "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
+  "entityType": "helpArticle",
+  "displayName": "Help Article",
+  "presentationEntries": [
+    {
+      "displayName": "Content",
+      "entryType": "DIVIDER"
+    },
+    {
+      "displayName": "Core Information",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "name",
+          "visibleOnAdd": true
+        },
+        {
+          "id": "entityId",
+          "visibleOnAdd": true
+        }
+      ]
+    },
+    {
+      "displayName": "Article Details",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "body",
+          "visibleOnAdd": true
+        },
+        {
+          "id": "freshdesk_categoryID"
+        },
+        {
+          "id": "freshdesk_folderID"
+        },
+        {
+          "id": "freshdesk_dateCreated"
+        },
+        {
+          "id": "freshdesk_dateUpdated"
+        },
+        {
+          "id": "freshdesk_tags"
+        },
+        {
+          "id": "freshdesk_views"
+        },
+        {
+          "id": "freshdesk_thumbsUp"
+        },
+        {
+          "id": "freshdesk_thumbsDown"
+        }
+      ]
+    },
+    {
+      "displayName": "Additional Attributes",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "shortDescription"
+        },
+        {
+          "id": "keywords"
+        },
+        {
+          "id": "landingPageUrl"
+        },
+        {
+          "id": "promoted"
+        },
+        {
+          "id": "voteCount"
+        },
+        {
+          "id": "voteSum"
+        }
+      ]
+    },
+    {
+      "displayName": "Settings",
+      "entryType": "DIVIDER"
+    },
+    {
+      "defaultCollapsed": true,
+      "displayName": "Internal Use Only",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "folder"
+        },
+        {
+          "id": "labels"
+        },
+        {
+          "id": "timezone"
+        }
+      ]
+    },
+    {
+      "defaultCollapsed": true,
+      "displayName": "Knowledge Assistant",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "primaryConversationContact"
+        },
+        {
+          "id": "nudgeEnabled"
+        }
+      ]
+    }
+  ]
+}
