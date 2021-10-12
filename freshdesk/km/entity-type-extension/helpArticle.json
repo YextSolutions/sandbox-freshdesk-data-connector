@@ -1,0 +1,40 @@
+{
+  "$id": "helpArticle",
+  "$schema": "https://schema.yext.com/config/km/entity-type-extension/v1",
+  "enabled": true,
+  "entityType": "helpArticle",
+  "field": [
+    {
+      "id": "freshdesk_categoryID",
+      "required": false
+    },
+    {
+      "id": "freshdesk_dateCreated",
+      "required": false
+    },
+    {
+      "id": "freshdesk_dateUpdated",
+      "required": false
+    },
+    {
+      "id": "freshdesk_folderID",
+      "required": false
+    },
+    {
+      "id": "freshdesk_tags",
+      "required": false
+    },
+    {
+      "id": "freshdesk_thumbsDown",
+      "required": false
+    },
+    {
+      "id": "freshdesk_thumbsUp",
+      "required": false
+    },
+    {
+      "id": "freshdesk_views",
+      "required": false
+    }
+  ]
+}
