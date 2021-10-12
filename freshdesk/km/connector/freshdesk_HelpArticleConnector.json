@@ -1,23 +1,12 @@
 {
-  "$id": "freshdeskHelpArticleConnector",
+  "$id": "freshdesk_helpArticleConnector",
   "$schema": "https://schema.yext.com/config/km/connector/v1",
   "displayName": "Freshdesk Help Article Connector",
   "entityType": "helpArticle",
   "source": {
     "sourceConfig": {
-      "apiPullConfig": {
-        "requestType": "GET",
-        "url": "https://mattmalonetest.freshdesk.com/api/v2/solutions/folders/69000541651/articles?per_page\u003d100",
-        "authentication": {
-          "basicAuthentication": {
-            "username": "${{km/connector.freshdeskHelpArticleConnector.api_username}}",
-            "password": "${{km/connector.freshdeskHelpArticleConnector.api_password}}"
-          }
-        },
-        "headers": {},
-        "queryParams": {
-          "": ""
-        },
+      "apiPushConfig": {
+        "app": "127708",
         "dataFormat": "JSON"
       }
     },
