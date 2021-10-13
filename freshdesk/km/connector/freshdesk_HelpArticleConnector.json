@@ -48,7 +48,7 @@
       },
       {
         "type": "JSON",
-        "header": "Labels",
+        "header": "Tags",
         "path": "tags"
       },
       {
@@ -70,6 +70,16 @@
         "type": "JSON",
         "header": "Date Updated",
         "path": "updated_at"
+      },
+      {
+        "type": "JSON",
+        "header": "Category Name",
+        "path": "categoryName"
+      },
+      {
+        "type": "JSON",
+        "header": "Folder Name",
+        "path": "folderName"
       }
     ]
   },
@@ -105,13 +115,43 @@
   ],
   "mappings": [
     {
+      "field": "freshdesk_dateUpdated",
+      "header": "Date Updated (final)",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_views",
+      "header": "Views",
+      "subfieldPath": []
+    },
+    {
       "field": "entityId",
       "header": "Entity ID",
       "subfieldPath": []
     },
     {
+      "field": "freshdesk_categoryName",
+      "header": "Category Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_dateCreated",
+      "header": "Date Created (final)",
+      "subfieldPath": []
+    },
+    {
       "field": "freshdesk_categoryID",
       "header": "Category ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "body",
+      "header": "Body",
+      "subfieldPath": []
+    },
+    {
+      "field": "freshdesk_tags",
+      "header": "Tags",
       "subfieldPath": []
     },
     {
@@ -125,21 +165,6 @@
       "subfieldPath": []
     },
     {
-      "field": "body",
-      "header": "Body",
-      "subfieldPath": []
-    },
-    {
-      "field": "freshdesk_views",
-      "header": "Views",
-      "subfieldPath": []
-    },
-    {
-      "field": "labels",
-      "header": "Labels",
-      "subfieldPath": []
-    },
-    {
       "field": "freshdesk_thumbsDown",
       "header": "Thumbs Down",
       "subfieldPath": []
@@ -150,13 +175,8 @@
       "subfieldPath": []
     },
     {
-      "field": "freshdesk_dateCreated",
-      "header": "Date Created (final)",
-      "subfieldPath": []
-    },
-    {
-      "field": "freshdesk_dateUpdated",
-      "header": "Date Updated (final)",
+      "field": "freshdesk_folderName",
+      "header": "Folder Name",
       "subfieldPath": []
     }
   ],
