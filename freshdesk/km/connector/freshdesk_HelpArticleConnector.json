@@ -48,7 +48,7 @@
       },
       {
         "type": "JSON",
-        "header": "Tags",
+        "header": "Labels",
         "path": "tags"
       },
       {
@@ -135,8 +135,8 @@
       "subfieldPath": []
     },
     {
-      "field": "freshdesk_tags",
-      "header": "Tags",
+      "field": "labels",
+      "header": "Labels",
       "subfieldPath": []
     },
     {
