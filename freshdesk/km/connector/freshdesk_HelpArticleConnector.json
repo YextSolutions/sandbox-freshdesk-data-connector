@@ -1,6 +1,6 @@
 {
   "$id": "freshdesk_helpArticleConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
   "displayName": "Freshdesk Help Article Connector",
   "entityType": "helpArticle",
   "source": {
