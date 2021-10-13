@@ -13,7 +13,7 @@
     "baseSelector": {
       "type": "JSON",
       "header": "Entity Container",
-      "path": "[]"
+      "path": "articles"
     },
     "selectors": [
       {
