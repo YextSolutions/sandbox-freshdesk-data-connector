@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "freshdesk_categoryName",
+      "required": false
+    },
+    {
       "id": "freshdesk_dateCreated",
       "required": false
     },
@@ -18,6 +22,10 @@
     },
     {
       "id": "freshdesk_folderID",
+      "required": false
+    },
+    {
+      "id": "freshdesk_folderName",
       "required": false
     },
     {
