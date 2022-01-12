@@ -35,7 +35,7 @@
       {
         "type": "JSON",
         "header": "Body",
-        "path": "description_text"
+        "path": "description"
       },
       {
         "type": "JSON",
