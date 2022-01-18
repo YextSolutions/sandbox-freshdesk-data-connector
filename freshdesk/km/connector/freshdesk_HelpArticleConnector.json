@@ -132,7 +132,7 @@
   ],
   "mappings": [
     {
-      "field": "freshdesk_dateUpdated",
+      "field": "externalArticleUpdateDate",
       "header": "Date Updated (final)",
       "subfieldPath": []
     },
@@ -152,7 +152,7 @@
       "subfieldPath": []
     },
     {
-      "field": "freshdesk_dateCreated",
+      "field": "externalArticlePostDate",
       "header": "Date Created (final)",
       "subfieldPath": []
     },
