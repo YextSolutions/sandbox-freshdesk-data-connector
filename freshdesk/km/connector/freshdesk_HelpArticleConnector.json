@@ -125,7 +125,7 @@
             "url"
           ]
         },
-        "plugin": "freshdeskSolutionArticles",
+        "plugin": "freshdesk_SolutionArticles",
         "function": "createFreshdeskSolutionUrl"
       }
     }
