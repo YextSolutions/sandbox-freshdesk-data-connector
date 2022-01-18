@@ -2,6 +2,6 @@
     "$id": "freshdesk_SolutionArticles",
     "$schema": "https://schema.yext.com/config/platform/plugin/v1",
     "globals" : {
-      "account": "${{account}}"
+      "account": "${{AccountSubdomain}}"
     }
   }
