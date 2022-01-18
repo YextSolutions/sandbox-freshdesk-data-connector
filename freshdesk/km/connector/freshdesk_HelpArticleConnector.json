@@ -81,6 +81,11 @@
         "type": "JSON",
         "header": "Folder Name",
         "path": "folderName"
+      },
+      {
+        "type": "JSON",
+        "header": "url",
+        "path": "id"
       }
     ]
   },
@@ -111,6 +116,17 @@
             "ignoreCase": false
           }
         }
+      }
+    },
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "url"
+          ]
+        },
+        "plugin": "freshdeskSolutionArticles",
+        "function": "createFreshdeskSolutionUrl"
       }
     }
   ],
@@ -178,6 +194,11 @@
     {
       "field": "freshdesk_folderName",
       "header": "Folder Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "url",
       "subfieldPath": []
     }
   ]
